@@ -101,7 +101,7 @@ def post_data_auth(headers, body):
     post(headers, body, True)
 
 
-@app.route("/", methods=["POST"])
+@app.route("/", methods=["GET", "POST"])
 def func():
     auth_headers = request.headers.get("authorization").split(",")
     body = request.get_data()
